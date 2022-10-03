@@ -1,0 +1,5 @@
+<launch>
+  <include file="$(find ros_essentials_cpp)/src/topic02_motion/launch/launch.launch"/>
+  <node pkg="rosbag" type="record" name="record" args="/turtle1/cmd_vel -o $HOME/bagfiles/"/>
+  <node pkg="ros_essentials_cpp" type="test4.py" name="pose_node" output="screen"/>
+</launch>
